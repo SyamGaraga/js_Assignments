@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            border: 2px solid ;
+            width: 250px;
+            height: 380px;
+            border-radius: 20px;
+            /* border-top-right-radius: 20px; */
+            
+        }
+        .image{
+            width:100%;
+            background-color:wheat;
+            height: 50px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .image2{
+            width: 50%;
+            height: 40%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .image3{
+            width: 50%;
+            height: 40px;
+            /* border: 1px solid; */
+            margin-left: 123px;
+            margin-top: -20px;
+            border-radius: 30px;
+            
+           
+        }
+        .content{
+            line-height: 1.4;
+            margin-left: 60px;
+            /* position:relative; */
+            
+            
+        }
+        .footer{
+            margin-top: -20px;
+            margin-left: 160px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>ID CARD</h1>
+    <button onclick="opencard()">view</button>
+    <script>
+        let div1=document.createElement("div")
+        let image=document.createElement("img")
+        let image2=document.createElement("img")
+        let content=document.createElement("p")
+        let image3=document.createElement("img")
+        let footer=document.createElement("p")
+        function opencard(){
+        
+        div1.classList.add("div1")
+        document.body.append(div1)
+
+        
+        image.setAttribute("src","https://upload.wikimedia.org/wikipedia/commons/c/cc/%E0%B0%B8%E0%B0%BE%E0%B0%97%E0%B0%BF_%E0%B0%B0%E0%B0%BE%E0%B0%AE%E0%B0%95%E0%B1%83%E0%B0%B7%E0%B1%8D%E0%B0%A3%E0%B0%82_%E0%B0%B0%E0%B0%BE%E0%B0%9C%E0%B1%81_%E0%B0%87%E0%B0%82%E0%B0%9C%E0%B0%A8%E0%B1%80%E0%B0%B0%E0%B0%BF%E0%B0%82%E0%B0%97%E0%B1%8D_%E0%B0%95%E0%B0%B3%E0%B0%BE%E0%B0%B6%E0%B0%BE%E0%B0%B2_IMG_20190531_124449.jpg")
+        image.classList.add("image")
+        div1.appendChild(image)
+
+        
+        image2.setAttribute("src","https://images.genius.com/adc307ce702341dd1b9b0a296e3ceaf8.702x702x1.jpg")
+        image2.classList.add("image2")
+        div1.appendChild(image2)
+
+        
+        content.innerHTML=" <strong>Name:</strong> G.Syam <br><strong>Roll no:</strong> 20B91A0591 <br><strong>Course:</strong> B-Tech-CSE <br><strong>Valid Upto:</strong> 2024"
+        content.classList.add("content")
+        div1.appendChild(content)
+
+        
+        image3.setAttribute("src","https://pbs.twimg.com/media/E4FGQtDXoAEdQi-?format=png&name=large")
+        image3.classList.add("image3")
+        div1.appendChild(image3)
+
+        
+        footer.innerHTML="Principal"
+        footer.classList.add("footer")
+        div1.appendChild(footer)
+        }
+        
+
+        // document.body.style.backgroundColor="red"
+    </script>
+</body>
+</html>
