@@ -1,0 +1,41 @@
+
+body{
+    background-color: black;
+}
+.title {
+  text-align: center;
+  text-decoration: underline;
+  color: white;
+}
+#box {
+  border: 2px solid white;
+  width: 250px;
+  margin: auto;
+  height:200px;
+  padding: 10px;
+  background-color: aqua;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 5px 1px white;
+  
+}
+button{
+    border-radius: 50px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+}
+#OTP{
+    
+
+    height: 35px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+    border-radius: 10px;
+    /* align-content: center; */
+    
+    
+
+}

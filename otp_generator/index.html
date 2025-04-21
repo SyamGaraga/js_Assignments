@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="otp.js"></script>
+    <link rel="stylesheet" href="OTP-style.css" />
+  </head>
+  <body>
+    <h1 class="title">OTP-Generator</h1>
+    
+    <div id="box">
+        <h1 id="OTP"></h1>
+        <p>Please do not share this OTP with anyone. It is vaild for 10 minutes </p>
+       
+      <button onclick="demo()">Generate OTP</button>
+    </div>
+
+    <!-- <button id="bnt">click me</button>   //active for method2 -->
+    
+
+    <script>
+      // method1-------------->***
+      
+      function demo() {
+        let x = Math.random();
+        let otp = Math.floor(x * 900000) + 100000;
+
+        document.body.style.backgroundColor = `#${otp}`;
+
+        let gen_otp = document.getElementById("OTP");
+
+        gen_otp.innerHTML = otp;
+        
+      }
+
+      // method2--------------->***
+      //   let bnt=document.getElementById("bnt")
+      //   bnt.addEventListener("click",function(){
+      //       let x = Math.random();
+      //   let otp = Math.floor(x * 900000) + 100000;
+
+      //   document.body.style.backgroundColor = `#${otp}`;
+
+      //   let gen_otp = document.getElementById("OTP");
+      //   gen_otp.innerHTML =otp;
+
+      //   })
+    </script>
+  </body>
+</html>
