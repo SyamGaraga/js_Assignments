@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>player card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Player Cards</h1>
+    <button id="btn">back</button>
+    <script>
+        let card=document.createElement("div")
+            card.classList.add("main_div")
+            document.body.append(card)
+
+          let bnt=document.getElementById("btn")
+          btn.addEventListener("click",()=>{
+            location.assign("index.html")
+          })
+      let data = fetch(
+        "https://679b9e0f33d31684632484d5.mockapi.io/cricketers"
+      );
+      data
+        .then((x) => x.json())
+        .then((x) => {
+          let res = x;
+          res.map((x) => {
+            
+            let div1 = document.createElement("div");
+            div1.classList.add("div1")
+            
+            let image = document.createElement("img");
+            image.classList.add("img");
+            image.src = x.image;
+
+            let name=document.createElement("h2")
+            name.textContent=x.name
+
+            let name_container=document.createElement("div")
+            name_container.classList.add("name_container")
+            
+
+            let role=document.createElement("p");
+            role.innerHTML=`<strong>Role :</strong> ${x.role}`
+
+            let nationality=document.createElement("p")
+            nationality.innerHTML=`<strong>Nationality :</strong> ${x.nationality}`
+
+            let matches=document.createElement("p")
+            matches.innerHTML=`<strong>Matches :</strong> ${x.matches}`
+
+            let runs=document.createElement("p")
+            runs.innerHTML=`<strong>Runs :</strong> ${x.runs}`
+
+            let wickets=document.createElement("p")
+            wickets.innerHTML=`<strong>Wickets :</strong> ${x.wickets}`
+
+            name_container.append(name)
+            div1.append(image,name_container,role,nationality,matches,runs,wickets);
+            card.append(div1)
+          });
+        })
+        .catch((x) => {
+          console.log(x);
+        });
+    </script>
+  </body>
+</html>
